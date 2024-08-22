@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service</title>
+    <link rel="stylesheet" href="officer_booking.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Officer Booking Service</h1>
+        <form id="bookingForm">
+            <!-- Sender Information -->
+            <fieldset>
+                <legend>Sender Information</legend>
+                <label for="senderName">Name:</label>
+                <input type="text" id="senderName" name="senderName" required>
+                
+                <label for="senderAddress">Address:</label>
+                <input type="text" id="senderAddress" name="senderAddress" required>
+                
+                <label for="senderContact">Contact Details:</label>
+                <input type="text" id="senderContact" name="senderContact" required>
+            </fieldset>
+
+            <!-- Receiver Information -->
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <label for="receiverName">Name:</label>
+                <input type="text" id="receiverName" name="receiverName" required>
+                
+                <label for="receiverAddress">Address:</label>
+                <input type="text" id="receiverAddress" name="receiverAddress" required>
+                
+                <label for="receiverPin">Pin Code:</label>
+                <input type="text" id="receiverPin" name="receiverPin" required>
+                
+                <label for="receiverContact">Contact Details:</label>
+                <input type="text" id="receiverContact" name="receiverContact" required>
+            </fieldset>
+
+            <!-- Parcel Details -->
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <label for="parcelSize">Size:</label>
+                <input type="text" id="parcelSize" name="parcelSize" required>
+                
+                <label for="parcelWeight">Weight:</label>
+                <input type="text" id="parcelWeight" name="parcelWeight" required>
+                
+                <label for="contentsDescription">Contents Description:</label>
+                <textarea id="contentsDescription" name="contentsDescription" required></textarea>
+            </fieldset>
+
+            <!-- Shipping Options -->
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <label for="deliverySpeed">Choose Delivery Speed:</label>
+                <select id="deliverySpeed" name="deliverySpeed" required>
+                    <option value="">Select...</option>
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                </select>
+                
+                <label>Packaging Preferences:</label>
+                <input type="radio" id="standardPackaging" name="packaging" value="standard" required>
+                <label for="standardPackaging">Standard Packaging</label>
+                
+                <input type="radio" id="customPackaging" name="packaging" value="custom" required>
+                <label for="customPackaging">Custom Packaging</label>
+                
+                <input type="radio" id="ecoPackaging" name="packaging" value="eco" required>
+                <label for="ecoPackaging">Eco-friendly Packaging</label>
+                
+                <input type="radio" id="fragileHandling" name="packaging" value="fragile" required>
+                <label for="fragileHandling">Fragile Item Handling</label>
+            </fieldset>
+
+            <!-- Date and Time Selection -->
+            <fieldset>
+                <legend>Date and Time Selection</legend>
+                <label for="pickupTime">Preferred Pickup/Drop-off Time:</label>
+                <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+            </fieldset>
+
+            <!-- Service Cost and Payment -->
+            <fieldset>
+                <legend>Service Cost and Payment</legend>
+                <p id="cost">Cost: $0.00</p>
+                
+                <label>Payment Methods:</label>
+                <input type="radio" id="creditCard" name="paymentMethod" value="credit" required>
+                <label for="creditCard">Credit/Debit Card</label>
+                
+                <input type="radio" id="paypal" name="paymentMethod" value="paypal" required>
+                <label for="paypal">PayPal</label>
+                
+                <input type="radio" id="bankTransfer" name="paymentMethod" value="bank" required>
+                <label for="bankTransfer">Bank Transfer</label>
+            </fieldset>
+
+            <!-- Additional Services -->
+            <fieldset>
+                <legend>Additional Services</legend>
+                <label for="insurance">Insurance Options:</label>
+                <input type="checkbox" id="insurance" name="insurance" value="insurance">
+                
+                <label for="tracking">Tracking Services:</label>
+                <input type="checkbox" id="tracking" name="tracking" value="tracking">
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+
+    <script src="officer_booking.js"></script>
+</body>
+</html>

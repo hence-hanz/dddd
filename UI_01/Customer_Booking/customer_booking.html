@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service</title>
+    <link rel="stylesheet" href="customer_booking.css">
+</head>
+<body>
+    <header>
+        <h1>Booking Service</h1>
+    </header>
+
+    <main>
+        <form id="bookingForm">
+            <fieldset>
+                <legend>Sender Information</legend>
+                <label for="senderName">Name:</label>
+                <input type="text" id="customerName" name="customerName" readonly>
+
+                <label for="senderAddress">Address:</label>
+                <textarea id="senderAddress" name="senderAddress" readonly></textarea>
+
+                <label for="senderContact">Contact Details:</label>
+                <input type="text" id="senderContact" name="senderContact" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <label for="receiverName">Name:</label>
+                <input type="text" id="receiverName" name="receiverName" required>
+
+                <label for="receiverAddress">Address:</label>
+                <textarea id="receiverAddress" name="receiverAddress" required></textarea>
+
+                <label for="receiverPincode">Pincode:</label>
+                <input type="text" id="receiverPincode" name="receiverPincode" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <label for="parcelSize">Size (L x W x H in cm):</label>
+                <input type="text" id="parcelSize" name="parcelSize" required>
+
+                <label for="parcelWeight">Weight (kg):</label>
+                <input type="text" id="parcelWeight" name="parcelWeight" required>
+
+                <label for="parcelDescription">Content Description:</label>
+                <textarea id="parcelDescription" name="parcelDescription" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <label for="deliverySpeed">Choose Delivery Speed:</label>
+                <select id="deliverySpeed" name="deliverySpeed" required>
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                    <option value="overnight">Overnight</option>
+                </select>
+
+                <label for="packagingPreferences">Select Packaging Preferences:</label>
+                <select id="packagingPreferences" name="packagingPreferences" required>
+                    <option value="standard">Standard Packaging</option>
+                    <option value="custom">Custom Packaging</option>
+                    <option value="eco">Eco Friendly Packaging</option>
+                    <option value="fragile">Fragile Item Packaging</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date and Time Selection</legend>
+                <label for="pickupDateTime">Preferred Pickup Date and Time:</label>
+                <input type="datetime-local" id="pickupDateTime" name="pickupDateTime" required>
+
+                <label for="dropoffDateTime">Preferred Dropoff Date and Time:</label>
+                <input type="datetime-local" id="dropoffDateTime" name="dropoffDateTime" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Cost and Payment</legend>
+                <p id="serviceCost">Service Cost: $0.00</p>
+                <label for="paymentMethod">Choose Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="debitCard">Debit Card</option>
+                    <option value="netBanking">Net Banking</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Services</legend>
+                <label><input type="checkbox" name="insurance" id="insurance"> Add Insurance</label><br>
+                <label><input type="checkbox" name="tracking" id="tracking"> Add Tracking Service</label>
+            </fieldset>
+
+            <button type="submit">Submit Booking</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <div id="validationMessages"></div>
+    </main>
+
+    <script src="customer_booking.js"></script>
+</body>
+</html>

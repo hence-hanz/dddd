@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Booking History</title>
+    <link rel="stylesheet" href="officer_booking_history.css">
+</head>
+<body>
+    <div class="history-container">
+        <header>
+            <div class="header">
+                <h1>Officer Booking History</h1>
+                <div class="welcome-logout">
+                    <span>Welcome, <span id="username">Officer</span></span>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="history-section">
+            <form id="searchForm">
+                <label for="customerID">Customer ID:</label>
+                <input type="text" id="customerID" name="customerID" required>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+
+                <button type="submit">Search</button>
+            </form>
+
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Booking ID</th>
+                        <th>Booking Date</th>
+                        <th>Receiver Name</th>
+                        <th>Delivered Address</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be inserted here dynamically -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <button id="prevButton">Previous</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="officer_booking_history.js"></script>
+</body>
+</html>

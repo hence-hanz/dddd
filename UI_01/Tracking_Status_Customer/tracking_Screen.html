@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Screen</title>
+    <link rel="stylesheet" href="tracking_screen.css">
+</head>
+<body>
+    <div class="tracking-container">
+        <h2>Track Your Package</h2>
+        <form id="trackingForm">
+            <div class="form-group">
+                <label for="bookingID">Booking ID:</label>
+                <input type="text" id="bookingID" name="bookingID" maxlength="12" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        
+        <div id="trackingStatus" class="status">
+            <!-- Tracking status will be displayed here -->
+        </div>
+    </div>
+
+    <script src="tracking_screen.js"></script>
+</body>
+</html>

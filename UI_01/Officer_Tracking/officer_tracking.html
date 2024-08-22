@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Tracking</title>
+    <link rel="stylesheet" href="officer_tracking.css">
+</head>
+<body>
+    <div class="tracking-container">
+        <header>
+            <div class="header">
+                <h1>Officer Tracking Dashboard</h1>
+                <div class="welcome-logout">
+                    <span>Welcome <span id="username">Officer</span></span>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="search-section">
+            <h2>Search Package</h2>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="customerID">Customer ID:</label>
+                    <input type="text" id="customerID" name="customerID">
+                </div>
+                <div class="form-group">
+                    <label for="bookingID">Booking ID:</label>
+                    <input type="text" id="bookingID" name="bookingID">
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Shipped Packages</h2>
+            <div id="packageList" class="package-list">
+                <!-- List of shipped packages will be populated here -->
+            </div>
+        </section>
+
+        <section class="status-section">
+            <div id="statusDisplay" class="status-display">
+                <!-- Status details will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="officer_tracking.js"></script>
+</body>
+</html>

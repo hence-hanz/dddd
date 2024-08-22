@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Update</title>
+    <link rel="stylesheet" href="delivery_update.css">
+</head>
+<body>
+    <div class="delivery-container">
+        <header>
+            <div class="header">
+                <h1>Delivery Update</h1>
+                <div class="welcome-logout">
+                    <span>Welcome <span id="username">Officer</span></span>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="update-section">
+            <h2>Update Delivery Status</h2>
+            <form id="updateForm">
+                <div class="form-group">
+                    <label for="bookingID">Booking ID:</label>
+                    <input type="text" id="bookingID" name="bookingID" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="inTransit">In Transit</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="returned">Returned</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Update Status</button>
+                </div>
+                <div id="message" class="message"></div>
+            </form>
+        </section>
+    </div>
+
+    <script src="delivery_update.js"></script>
+</body>
+</html>

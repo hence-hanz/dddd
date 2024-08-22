@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice</h1>
+        <div id="invoiceDetails">
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <p><strong>Name:</strong> <span id="receiverName">John Doe</span></p>
+                <p><strong>Address:</strong> <span id="receiverAddress">1234 Elm Street, Springfield</span></p>
+                <p><strong>Pin:</strong> <span id="receiverPin">123456</span></p>
+                <p><strong>Mobile:</strong> <span id="receiverMobile">+1234567890</span></p>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <p><strong>Weight (g):</strong> <span id="parcelWeight">500</span></p>
+                <p><strong>Contents Description:</strong> <span id="parcelContents">Books and Electronics</span></p>
+                <p><strong>Delivery Type:</strong> <span id="deliveryType">Express</span></p>
+                <p><strong>Packing Preference:</strong> <span id="packingPreference">Eco-friendly Packaging</span></p>
+                <p><strong>Pickup Time:</strong> <span id="pickupTime">2024-08-20 10:00 AM</span></p>
+                <p><strong>Dropoff Time:</strong> <span id="dropoffTime">2024-08-20 12:00 PM</span></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Cost</legend>
+                <p><strong>Service Cost:</strong> <span id="serviceCost">$100.00</span></p>
+                <p><strong>Payment Time:</strong> <span id="paymentTime">2024-08-18 02:00 PM</span></p>
+            </fieldset>
+        </div>
+        <button id="printButton">Print Invoice</button>
+    </div>
+
+    <script src="invoice.js"></script>
+</body>
+</html>

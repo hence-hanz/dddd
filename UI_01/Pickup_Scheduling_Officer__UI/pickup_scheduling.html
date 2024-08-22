@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup Scheduling</title>
+    <link rel="stylesheet" href="pickup_scheduling.css">
+</head>
+<body>
+    <div class="pickup-container">
+        <header>
+            <div class="header">
+                <h1>Pickup Scheduling</h1>
+                <div class="welcome-logout">
+                    <span>Welcome <span id="username">Officer</span></span>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="search-section">
+            <h2>Search Booking</h2>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="searchBookingID">Booking ID:</label>
+                    <input type="text" id="searchBookingID" name="searchBookingID" required>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="schedule-section" id="scheduleSection" style="display: none;">
+            <h2>Schedule Pickup</h2>
+            <form id="scheduleForm">
+                <div class="form-group">
+                    <label for="bookingID">Booking ID:</label>
+                    <input type="text" id="bookingID" name="bookingID" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="pickupDateTime">Pickup Date & Time:</label>
+                    <input type="datetime-local" id="pickupDateTime" name="pickupDateTime" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Save</button>
+                </div>
+                <div id="message" class="message"></div>
+            </form>
+        </section>
+    </div>
+
+    <script src="pickup_scheduling.js"></script>
+</body>
+</html>

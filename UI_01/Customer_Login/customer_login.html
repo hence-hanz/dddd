@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+    <link rel="stylesheet" href="customer_login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Customer Login</h2>
+        <form id="loginForm">
+            <label for="userID">User ID:</label>
+            <input type="text" id="userID" name="userID" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="30" required>
+
+            <div id="error-message" class="error-message"></div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="customer_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="welcome">
+                Welcome <span id="username">User</span>
+            </div>
+            <button id="logoutButton">Logout</button>
+        </div>
+        <h1>Payment Page</h1>
+        <form id="paymentForm">
+            <fieldset>
+                <legend>Bill Amount</legend>
+                <p id="billAmount">$100.00</p> <!-- Example amount, update dynamically if needed -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Mode of Payment</legend>
+                <label>
+                    <input type="radio" name="paymentMode" value="credit" checked> Credit/Debit Card
+                </label>
+            </fieldset>
+
+            <button type="button" id="payNowButton">Pay Now</button>
+            <button type="button" id="backButton">Back to Home</button>
+        </form>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

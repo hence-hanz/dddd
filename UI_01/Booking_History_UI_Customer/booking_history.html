@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History</title>
+    <link rel="stylesheet" href="booking_history.css">
+</head>
+<body>
+    <div class="history-container">
+        <header>
+            <div class="header">
+                <h1>Booking History</h1>
+                <div class="welcome-logout">
+                    <span>Welcome, <span id="username">Customer</span></span>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="history-section">
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Booking ID</th>
+                        <th>Receiver Name</th>
+                        <th>Delivered Address</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be inserted here dynamically -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <button id="prevButton">Previous</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="booking_history.js"></script>
+</body>
+</html>
